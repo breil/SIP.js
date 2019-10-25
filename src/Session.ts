@@ -2613,7 +2613,7 @@ export class InviteClientContext extends Session implements ClientContext {
       //              in non-forking environments (think straight to FreeSWITCH) who want
       //              early media on a 183. Not sure how to actually make it work, basically
       //              something like...
-      if (0 /* flag */ && this.hasOffer && !this.hasAnswer && this.sessionDescriptionHandler) {
+      if (this.hasOffer && !this.hasAnswer && this.sessionDescriptionHandler) {
         this.hasAnswer = true;
         this.status = SessionStatus.STATUS_EARLY_MEDIA;
         this.sessionDescriptionHandler
